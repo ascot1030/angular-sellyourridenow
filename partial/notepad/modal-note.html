@@ -1,0 +1,16 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" data-ng-click="close(result)">×</button>
+    <h3 id="myModalLabel">General Note</h3>
+</div>
+<div class="modal-body">
+    <form name="noteForm" id="note-form" method="post" data-disable-default="">
+        <div class="note-entry">
+            <div>Notes</div>
+            <textarea id="note-area" data-ng-model="currentNote.userNote" placeholder="Enter Your Note Here" required="required" style="width: 100%"></textarea>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" data-ng-click="SaveNew()" data-ng-disabled="noteForm.$invalid">Save and New</button>
+    <button class="btn btn-primary" data-ng-click="saveClose()" data-ng-disabled="noteForm.$invalid">Save and Close</button>
+</div>

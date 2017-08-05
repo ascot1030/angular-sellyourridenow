@@ -1,0 +1,114 @@
+
+<div id="logo-group">
+
+    <!-- PLACE YOUR LOGO HERE -->
+    <span id="logo"> <img src="content/img/sellerator-logo.png" alt="Sellerator"> </span>
+    <!-- END LOGO PLACEHOLDER -->
+
+    <span>
+        <span>
+            <span id="activity">
+                <a href="javascript: void(0);" data-toggle="modal" data-target="#notificationModal">
+                    <i class="fa fa-user" ng-class="icon"></i>
+                    <b class="badge bg-color-red bounceIn animated">{{notifications.length}}</b>
+                </a>
+            </span>
+        </span>
+    </span>
+
+
+    <!-- Will change this when we add notifications. -->
+    <!--<span data-ng-controller="ActivityDemoCtrl">
+        <activity data-onrefresh="refreshCallback">
+            <activity:button data-icon="fa fa-user" data-total="total" />
+            <activity:content data-footer="footerContent">
+                <activity:item data-src="item.src" data-onload="item.onload" data-active="item.active" data-ng-repeat="item in items">
+                    <span data-localize="{{ item.title }}">{{ item.title }}</span> ({{ item.count }})
+                </activity:item>
+            </activity:content>
+        </activity>
+    </span>-->
+</div>
+
+<!-- projects dropdown -->
+<div id="project-list-full" class="project-context">
+
+    <span class="label"><span data-localize="Projects">Projects</span>:</span>
+    <span class="project-selector popover-trigger-element dropdown-toggle" data-toggle="dropdown"><span data-localize="Recent projects">Select Project </span> <i class="fa fa-angle-down"></i></span>
+
+    <!-- Suggestion: populate this list with fetch and push technique -->
+    <ul class="dropdown-menu">
+        <li class="vsl-item" data-ng-repeat="project in projects" data-ng-class="{selected: projects[$index].id == currentProject.id}">
+            <a data-ng-click="selectProject($index)">{{project.title}}</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#/project/save"><i class="fa fa-plus"></i> New Project</a>
+        </li>
+        <li data-ng-show="hasGenerator">
+            <a href="javascript: void(0);" data-ng-click="startVslCopy()"><i class="fa fa-copy"></i> Copy Current Project</a>
+        </li>
+        <li data-ng-show="hasGenerator">
+            <a href="javascript: void(0);" data-ng-click="deleteProject()"><i class="fa fa-times-circle"></i> Delete Current Project</a>
+        </li>
+    </ul>
+    <!-- end dropdown-menu-->
+
+</div>
+<div id="project-list-mobile" class="project-context">
+
+    <a class="label"><a href="#/projects">Projects</a>:</span>
+
+</div>
+<!-- end projects dropdown -->
+<!-- pulled right: nav area -->
+<div class="pull-right">
+
+    <!-- collapse menu button -->
+    <div id="hide-menu" class="btn-header pull-right">
+        <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+    </div>
+    <!-- end collapse menu -->
+    <!-- Top menu profile link : this shows only when top menu is active -->
+    <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+        <li class="">
+            <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+                <img src="content/img/avatars/sunny.html" alt="John Doe" class="online" />
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0"><i class="fa fa-cog"></i> Setting</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#/misc/other/profile" class="padding-10 padding-top-0 padding-bottom-0"> <i class="fa fa-user"></i> <u>P</u>rofile</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="toggleShortcut"><i class="fa fa-arrow-down"></i> <u>S</u>hortcut</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="launchFullscreen"><i class="fa fa-arrows-alt"></i> Full <u>S</u>creen</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="login.html" class="padding-10 padding-top-5 padding-bottom-5" data-action="userLogout"><i class="fa fa-sign-out fa-lg"></i> <strong><u>L</u>ogout</strong></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- logout button -->
+    <!--<div id="logout" class="btn-header transparent pull-right">
+        <span> <a href="login.html" title="Sign Out" data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i></a> </span>
+    </div>-->
+    <!-- end logout button -->
+    <!-- fullscreen button -->
+    <!--<div id="fullscreen" class="btn-header transparent pull-right">
+        <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
+    </div>-->
+    <!-- end fullscreen button -->
+
+</div>
+<!-- end pulled right: nav area -->

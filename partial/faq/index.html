@@ -1,0 +1,44 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+    <h5 style="float: left;">Explore Our Questions</h5>
+    <h5 style="float: right;"><a href="#/forum/ask">Ask Question</a></h5>
+
+    <table class="forum">
+        <tbody>
+            <tr data-ng-show="questions.length == 0">
+                <td colspan="3" data-ng-show="(request.tag == '') && (request.userId == '')">
+                    No questions have been asked. <a href="#/questions/ask">Be the first!</a>
+                </td>
+                <td colspan="3" data-ng-show="request.tag != ''">
+                    There are no questions tagged '{{request.tag}}' <a href="#/questions/ask">Ask your own question.</a>
+                </td>
+                <td colspan="3" data-ng-show="request.userId != ''">
+                    This user has not asked any questions. <a href="#/questions/ask">Ask your own question.</a>
+                </td>
+            </tr>
+            <tr data-ng-hide="questions.length == 0" data-ng-repeat="question in questions">
+                <td class="votes">
+                    <div class="vote-count">{{question.question.totalVotes}}</div>
+                    <div class="vote-text">Votes</div>
+                </td>
+                <td class="answers">
+                    <div class="answer-count">{{question.answersCount}}</div>
+                    <div class="answer-text">Answers</div>
+
+                </td>
+                <td>
+                    <h5><a href="#/questions/question/{{question.question.id}}" class="question-link">{{question.question.title}}</a></h5>
+                    <div class="question-tags">
+                        <a class="question-tag" data-ng-repeat="tag in question.question.tags" href="#/questions/tags/{{tag}}">{{tag}}</a>
+                    </div>
+                    <div class="question-info">
+                        Asked {{question.question.createdDate|jsonDate}} by <span class="question-author"><a href="#/questions/users/{{question.user.id}}">{{question.user.firstName}}</a></span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="text-align:center; margin-top: 10px;" data-ng-show="showMoreButton()"><button class="btn btn-primary" data-ng-click="getMoreQuestions()">Load More Questions</button></div>
+</div>

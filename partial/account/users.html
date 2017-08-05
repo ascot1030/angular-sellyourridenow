@@ -1,0 +1,36 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div class="pull-right">
+        <a href="#/account/users/0" class="btn btn-primary" data-ng-disabled="!canAddLicenses"><i class="icon-plus icon-white"></i> Add User</a>
+    </div>
+    <p>You are using {{accountInfo.licensesUsed}} of {{accountInfo.licensesAllowed}} available licenses.</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="license in accountInfo.licenses">
+                <td>{{license.firstName}}</td>
+                <td>{{license.lastName}}</td>
+                <td>{{license.email}}</td>
+                <td style="width: 30px;">
+                    <a class="btn btn-mini btn-danger" data-ng-click="deleteLicense(license)" data-prevent-default="" href="#" data-ng-show="canDelete(license.email)">
+                        <i class="icon-remove icon-white"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pull-right">
+        <a href="#/account/users/0" class="btn btn-primary" data-ng-disabled="!canAddLicenses"><i class="icon-plus icon-white"></i> Add User</a>
+    </div>
+</div>

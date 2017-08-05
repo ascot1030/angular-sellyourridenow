@@ -1,0 +1,17 @@
+﻿<div class="spacing" data-ui-animate="" data-ng-init="section='Part 3'; step='Video 4';">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+    <div data-ng-hide="hasBoardroom">
+        You do not have permission to view this page. Buy Boardroom NOW!!! to gain access.
+    </div>
+
+    <div style="text-align: center; margin: 0 auto;" data-ng-show="hasBoardroom">
+        <iframe src="http://player.vimeo.com/video/67753536" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen data-ng-hide="hasScriptGenerator && !hasVsl"></iframe>
+    </div>
+
+
+    <div class="continue">
+        <a href="#/boardroom/5-1" class="btn btn-success">Continue To Next Section &#x25B6;</a>
+    </div>
+</div>

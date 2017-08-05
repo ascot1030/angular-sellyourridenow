@@ -1,0 +1,19 @@
+﻿<div class="spacing" data-ui-animate="" data-ng-init="month='Issue 1'; person='Bret Gregory, Facebook Traffic Expert';">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div style="text-align: center; margin: 0 auto;" data-ng-hide="hasTrafficPros">
+        <p>You do not have Traffic Pros Monthly added to your account.  <a href="https://ramirami.com/upgrades/trafficpros.html?firstnamepar={{user.firstName}}&amp;lastnamepar={{user.lastName}}&amp;emailpar={{user.email}}" target="_blank">Add It Now!</a></p>
+    </div>
+
+    <div style="text-align: center; margin: 0 auto;" data-ng-show="hasTrafficPros">
+        <iframe src="http://player.vimeo.com/video/74023845" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <ul style="list-style: none;" data-ng-show="hasTrafficPros">
+        <li><a href="http://53fe55a82bef3afebf73-1337ae5e10de8c77a758a83d63267cdf.r87.cf1.rackcdn.com/TPM_Gregory_Transcript.pdf" target="_blank">Download the transcript</a></li>
+    </ul>
+
+    <p data-ng-show="hasTrafficPros">Discover Bret's secret for getting a TON of Facebook likes in less than two weeks, driving targeted traffic direct to your opt-in and VSL page. This is a perfect strategy for beginners and intermediate-level marketers. Bret also shares some of his advanced traffic techniques, and how he made 1.5M from Facebook using these innovative strategies!</p>
+</div>

@@ -1,0 +1,64 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div data-ng-show="showLogin">
+        <a href="javascript: void(0);" data-prevent-default="data-prevent-default" data-ng-click="facebookLogin()">Login to Facebook</a> to view the Copy Posse Group discussion.
+    </div>
+
+    <div data-ng-hide="showLogin" id="facebook-group">
+        <div data-ng-show="!groupPermission">
+            <p>The Copy Posse on Facebook is a members-only group. Your membership includes free access, but you must first request permission to join by <a href="https://www.facebook.com/groups/3XVSLCopyCommunity/" target="_blank">clicking here</a>.</p>
+        </div>
+        
+                
+        <div id="facebook-comment" class="accordion-group" data-ng-hide="!groupPermission" style="border: none;">
+            <a data-target="#facebook-write-comment" data-prevent-default="" class="btn btn-success" data-toggle="collapse">Create New Post</a>
+            <div id="facebook-write-comment" class="collapse">
+                <div data-ng-hide="permissions.publish_actions && (permissions.publish_actions == 1)">
+                    Oops! We need permission from Facebook to post on your behalf. <button class="btn" data-ng-click="facebookLogin()">Authorize Facebook</button>.
+                </div>
+                <form data-ng-submit="newPost()" data-ng-show="permissions.publish_actions && (permissions.publish_actions == 1)">
+                    <textarea data-ng-model="postMessage" style="width: 90%;" placeholder="What do you want to say?"></textarea>
+                    <button class="btn btn-primary">Submit Post</button>
+                </form>
+            </div>
+        </div>
+        <div class="facebook-post" data-ng-repeat="post in groupPosts" data-ng-hide="!groupPermission">
+            <div class="user-photo"></div>
+            <div class="user-post">
+                <div class="user-fullname"><a href="javascript: void(0);" data-target="#post-{{post.id}}" data-toggle="collapse"><span class="pull-right">&#x25BC;</span>{{post.from.name}}</a></div>
+                <div id="post-{{post.id}}" class="collapse in">
+                    <div class="user-message post-content" data-ng-bind-html="post.message|nl2br"></div>
+                    <a data-ng-hide="userLikes(post)" href="javascript: void(0);" data-prevent-default="data-prevent-default" data-ng-click="like(post.id)">Like</a>
+                    <a data-ng-show="userLikes(post)" href="javascript: void(0);" data-prevent-default="data-prevent-default" data-ng-click="unLike(post.id)">Unlike</a>
+                    <div class="message-comments accordion-group post-content">
+                        <div><a href="javascript: void(0);" data-prevent-default="" data-target="#comment_{{post.id}}" data-toggle="collapse"><span class="pull-right">&#x25BC;</span> {{post.comments.data.length || 0}} Comments</a></div>
+                        <div id="comment_{{post.id}}" class="collapse in message-comment">
+                            <div data-ng-repeat="comment in post.comments.data">
+                                <span class="user-fullname">{{comment.from.name}}</span>
+                                <span class="user-comment" data-ng-bind-html="comment.message|nl2br"></span>
+                                
+                                <a data-ng-hide="comment.user_likes" href="javascript: void(0);" data-prevent-default="data-prevent-default" data-ng-click="like(post.id + '_' + comment.id)">Like</a>
+                                <a data-ng-show="comment.user_likes" href="javascript: void(0);" data-prevent-default="data-prevent-default" data-ng-click="unLike(post.id + '_' + comment.id)">Unlike</a>
+                            </div>
+
+                        </div>
+                        
+                        <div class="accordion-group" style="border: none;">
+                            <a data-target="#facebook-create-comment-{{post.id}}" data-prevent-default="" class="btn btn-success btn-mini" data-toggle="collapse">Create New Comment</a>
+                            <div id="facebook-create-comment-{{post.id}}" class="collapse">
+                                <form data-ng-submit="sendComment(post)">
+                                    <textarea data-ng-model="post.commentBox" style="width: 90%;"></textarea>
+                                    <button class="btn btn-primary btn-mini">Submit Comment</button>
+                                </form>
+                            </div>
+                        </div>
+                        <a href="https://www.facebook.com/groups/3XVSLCopyCommunity/" target="_blank">View On Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

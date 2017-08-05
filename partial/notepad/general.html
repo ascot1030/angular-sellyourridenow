@@ -1,0 +1,15 @@
+<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+    <div id="tutorial">
+        <p>Use this to enter any notes that do not fall within the categories you have just completed.</p>
+
+    </div>
+    <div data-ng-show="hasGenerator">
+        <div data-ng-include="'/partial/notepad/note-form.html'"></div>
+    </div>
+    <div class="continue">
+        <a href="#/getting-started/using-study-tools" class="btn btn-success" data-ng-click="saveNote()">Continue To Next Section &#x25B6;</a>
+    </div>
+</div>

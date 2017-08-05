@@ -1,0 +1,26 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <form id="question-form">
+        <div>
+            <label>Title:<br />
+                <input type="text" data-ng-model="question.title" placeholder="What is your VSL question?" />
+            </label>
+        </div>
+        <div>
+            <label>Detailed Question:<br />
+                <textarea data-ng-model="question.content" placeholder="Put the details of your question here. Be as detailed as possible."></textarea>
+            </label>
+        </div>
+        <div>
+            <label>Tags:<br />
+                <input type="text" data-ng-model="question.tags" placeholder="Please enter at least one tag." />
+            </label>
+        </div>
+        <div>
+            <button class="btn btn-primary" data-prevent-default="data-prevent-default" data-ng-click="saveQuestion()">Ask</button>
+        </div>
+    </form>
+</div>

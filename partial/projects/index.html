@@ -1,0 +1,17 @@
+﻿<div class="spacing" data-ui-animate="">
+    <ul class="">
+        <li class="vsl-item" data-ng-repeat="project in projects" data-ng-class="{selected: projects[$index].id == currentProject.id}">
+            <a data-ng-click="selectProject($index)">{{project.title}}</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#/project/save"><i class="fa fa-plus"></i> New Project</a>
+        </li>
+        <li data-ng-show="hasGenerator">
+            <a href="javascript: void(0);" data-ng-click="startVslCopy()"><i class="fa fa-copy"></i> Copy Current Project</a>
+        </li>
+        <li data-ng-show="hasGenerator">
+            <a href="javascript: void(0);" data-ng-click="deleteProject()"><i class="fa fa-times-circle"></i> Delete Current Project</a>
+        </li>
+    </ul>
+</div>

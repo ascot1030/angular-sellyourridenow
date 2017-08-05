@@ -1,0 +1,258 @@
+<!-- User info -->
+			<div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as is --> 
+					
+					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+						<span style="margin-top: 3px;">
+							<i class="fa fa-large fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;<strong>My Dashboard</strong>
+						</span>
+						<i class="fa fa-angle-down"></i>
+					</a> 
+					
+				</span>
+			</div>
+			<!-- end user info -->
+
+			<!-- NAVIGATION : This navigation is also responsive
+
+			To make this navigation dynamic please make sure to link the node
+			(the reference to the nav > ul) after page load. Or the navigation
+			will not initialize.
+			-->
+
+			<navigation>
+				<nav:group data-icon="fa fa-large fa-fw fa-fire" title="Getting Started">
+                    <!--<nav:item data-view="/getting-started/live-coaching" title="Sellerator Live Coaching" />-->
+                    <nav:item data-view="/getting-started/using-generator" title="Using The Sellerator" />
+					<nav:item data-view="/getting-started/toolbox" title="The 3X VSL Toolbox" />
+
+					<nav:group title="3X Notepad Assignments">
+						<nav:item data-view="/notepad/usp-factory" title="USP Factory" />
+						<nav:item data-view="/notepad/2-stories" title="2 Stories" />
+						<nav:item data-view="/notepad/3-tips" title="3 Tips/4 Comparisons" />
+						<nav:item data-view="/notepad/general" title="General Notes" />
+					</nav:group>
+
+					<nav:group title="Downloads">
+						<nav:item data-view="/getting-started/using-study-tools" title="Using The Study Tools" />
+						<nav:item data-view="/getting-started/downloads" title="Download Files" />
+					</nav:group>
+				</nav:group>
+
+				<nav:group data-icon="fa fa-large fa-fw fa-magic" title="Step 1: The Snap Suggestion">
+					<nav:item data-view="/snap-suggestion/pattern-interrupt" title="Pattern Interrupt | Attention" data-ng-click="slideClear()" />
+
+					<nav:group title="Your Big Promise">
+						<nav:item data-view="/snap-suggestion/big-promise/watch-now" title="Watch This Now" data-ng-click="slideClear()" />
+						<nav:item data-view="/snap-suggestion/big-promise/benefit-formula" title="Benefit Formula" data-ng-click="slideClear()" />
+					</nav:group>
+					<nav:item data-view="/snap-suggestion/video-scarcity" title="Create Scarcity" data-ng-click="slideClear()" />
+					<nav:item data-view="/snap-suggestion/something-different" title="Something Completely Different" data-ng-click="slideClear()" />
+					<nav:item data-view="/snap-suggestion/deal" title="Let's Make A Deal" data-ng-click="slideClear()" />
+				</nav:group>
+
+				<nav:group data-icon="fa fa-large fa-fw fa-group" title="Step 2: The Vital Connection">
+					<nav:item data-view="/vital-connection/modest-introduction" title="Modest Introduction" data-ng-click="slideClear()" />
+
+					<nav:group title="The Nightmare Story">
+						<nav:item data-view="/vital-connection/nightmare-story/overview" title="Overview" data-ng-click="slideClear()" />
+						<nav:item data-view="/vital-connection/nightmare-story/introduction" title="Introduction" data-ng-click="slideClear()" />
+						<nav:item data-view="/vital-connection/nightmare-story/bad-part" title="The Bad Part" data-ng-click="slideClear()" />
+						<nav:item data-view="/vital-connection/nightmare-story/really-bad-part" title="The Really Bad Part" data-ng-click="slideClear()" />
+						<nav:item data-view="/vital-connection/nightmare-story/declaration-of-independence" title="Declare Independence" data-ng-click="slideClear()" />
+						<nav:item data-view="/vital-connection/nightmare-story/moral-journey" title="The Moral Journey" data-ng-click="slideClear()" />
+					</nav:group>
+					<nav:item data-view="/vital-connection/transition-to-big-problem" title="Transition To Big Problem" data-ng-click="slideClear()" />
+					<nav:item data-view="/vital-connection/about-the-system" title="About The System" data-ng-click="slideClear()" />
+					<nav:item data-view="/vital-connection/results-of-the-system" title="Results Of The System" data-ng-click="slideClear()" />
+					<nav:item data-view="/vital-connection/final-transition-phrase" title="Final Transition Phrase" data-ng-click="slideClear()" />
+				</nav:group>
+
+				<nav:group data-icon="fa fa-large fa-fw fa-exclamation-triangle" title="Step 3: The Big Problem">
+					<nav:group title="Overview + Conspiracy Cycle">
+						<nav:item data-view="/big-problem/conspiracy-cycle/overview" title="Overview" data-ng-click="slideClear()" />
+						<nav:item data-view="/big-problem/conspiracy-cycle/big-lie-transition" title="Big Lie Transition" data-ng-click="slideClear()" />
+						<nav:item data-view="/big-problem/conspiracy-cycle/big-lie-loop" title="Big Lie Loop" data-ng-click="slideClear()" />
+						<nav:item data-view="/big-problem/conspiracy-cycle/not-your-fault" title="It's Not Your Fault" data-ng-click="slideClear()" />
+						<nav:item data-view="/big-problem/conspiracy-cycle/blame-this" title="Blame This" data-ng-click="slideClear()" />
+						<nav:item data-view="/big-problem/conspiracy-cycle/big-truth" title="The Big Truth" data-ng-click="slideClear()" />
+					</nav:group>
+					<nav:item data-view="/big-problem/open-bigger-solution-loop" title="Bigger Solution Open Loop" data-ng-click="slideClear()" />
+				</nav:group>
+
+				<nav:group data-icon="fa fa-large fa-fw fa-flask" title="Step 4: The Bigger Solution">
+					<nav:item data-view="/bigger-solution/open-tip-loop" title="Open Tip Loop" data-ng-click="slideClear()" />
+					<nav:item data-view="/bigger-solution/the-3-tip-formula-overview" title="The 3 Tip Formula Overview" data-ng-click="slideClear()" />
+					<nav:item data-view="/bigger-solution/the-avoid-tip" title="The Avoid Tip" data-ng-click="slideClear()" />
+					<nav:item data-view="/bigger-solution/the-enjoy-tip" title="The Enjoy Tip" data-ng-click="slideClear()" />
+					<nav:item data-view="/bigger-solution/the-how-to-tip" title="The How-To Tip" data-ng-click="slideClear()" />
+					<nav:item data-view="/bigger-solution/transition-into-the-grand-offer" title="Transition Into The Grand Offer" data-ng-click="slideClear()" />
+				</nav:group>
+
+				<nav:group data-icon="fa fa-large fa-fw fa-tags" title="Step 5: The Grand Offer">
+					<nav:group title="The Product">
+						<nav:item data-view="/grand-offer/product/overview" title="Overview + Formal Introduction" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/usp" title="Product + USP" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/works" title="Works Even If" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/what-its-not" title="What It Isn't" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/hero-study" title="The Hero Study" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/hero-study-result" title="Result Of Hero Study" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/out-of-club" title="Out Of The Club" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/easy-as-it-gets" title="As Easy As It Gets" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/qualify" title="Qualify Remaining" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/testimonials" title="Testimonials" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/whats-in-product" title="What's In The Product" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/emphasize" title="Emphasize X" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/first-price-tease" title="First Price Tease" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/product/3-more-benefits" title="3 More Benefits" data-ng-click="slideClear()" />
+					</nav:group>
+					<nav:group title="The Price">
+						<nav:item data-view="/grand-offer/price/faux-price" title="Optional Faux Price" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/bonuses" title="Bonuses" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/restate-faux-price" title="Restate Faux Price" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/cost-of-loss" title="Cost Of Loss" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/discount-reason" title="Reason For Discount" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/price-drop-down" title="Price Dropdown" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/price-reveal" title="Price Reveal" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/price/3x-guarantee" title="Triple Guarantee" data-ng-click="slideClear()" />
+					</nav:group>
+					<nav:group title="Call To Action">
+						<nav:item data-view="/grand-offer/call-to-action/overview" title="Overview + CTA" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/call-to-action/testimonials" title="Testimonials" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/call-to-action/super-bonus" title="The Super Bonus" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/call-to-action/inclusion" title="Inclusion" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/call-to-action/3xcta" title="CTA" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/call-to-action/checkout-process" title="Checkout Process" data-ng-click="slideClear()" />
+					</nav:group>
+					<nav:group title="Pain/Pleasure">
+						<nav:item data-view="/grand-offer/pain-pleasure/reminder" title="Reminder" data-ng-click="slideClear()" />
+						<nav:item data-view="/grand-offer/pain-pleasure/responsibility" title="Responsibility" data-ng-click="slideClear()" />
+                        <nav:item data-view="/grand-offer/pain-pleasure/reinforce" title="Reinforce" data-ng-click="slideClear()" />
+					</nav:group>
+                    <nav:group title="Actions/Results">
+                        <nav:item data-view="/grand-offer/actions-results/future-paced" title="Future Paced Actions" data-ng-click="slideClear()" />
+                        <nav:item data-view="/grand-offer/actions-results/remember-overview" title="Remember Overview" data-ng-click="slideClear()" />
+                        <nav:item data-view="/grand-offer/actions-results/3-reasons" title="3 Reasons To Act Now" data-ng-click="slideClear()" />
+                        <nav:item data-view="/grand-offer/actions-results/smart-thing" title="The Smart Thing" data-ng-click="slideClear()" />
+                    </nav:group>
+                    <nav:item data-view="/grand-offer/q-a" title="Samurai Q&amp;A" data-ng-click="slideClear()" />
+				</nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-cogs" title="Producing Your VSL">
+                    <nav:item data-view="/produce/changing-fonts" title="Changing Font Sizes And Styles" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/tonality" title="3X Vocal Tonality Technique" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/using-screenflow" title="Recording With ScreenFlow" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/screenflow-split" title="ScreenFlow With External Audio" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/using-camtasia" title="Recording With Camtasia" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/camtasia-split" title="Camtasia With External Audio" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/magic-buy-button" title="The Magic Buy Button" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/advanced-magic-buy-button" title="The Magic Buy Button (Advanced)" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/evp" title="Using Easy Video Player To Record" data-ng-click="slideClear()" />
+                    <nav:item data-view="/produce/compression" title="Advanced Compression Tactics" data-ng-click="slideClear()" />
+                </nav:group>
+
+                <!--<nav:item data-icon="fa fa-large fa-fw fa-facebook" data-view="/forum" title="Copy Posse Discussion" />-->
+
+                <nav:group data-icon="fa fa-large fa-fw fa-calendar-o" title="28-Day Product Creation Formula">
+                    <nav:item data-view="/product-creation-formula/week-1" title="Week 1" />
+                    <nav:item data-view="/product-creation-formula/week-2" title="Week 2" />
+                    <nav:item data-view="/product-creation-formula/week-3" title="Week 3" />
+                    <nav:item data-view="/product-creation-formula/week-4" title="Week 4" />
+                </nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-crop" title="Short Form VSL Formula">
+                    <nav:item data-view="/short-form/1-minute" title="1-Minute VSL Formula" />
+                    <nav:item data-view="/short-form/5-minute" title="5-Minute VSL Formula" />
+                    <nav:item data-view="/short-form/20-minute" title="20-Minute VSL Formula" />
+                </nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-gavel" title="Conversion Secrets Seminar">
+                    <nav:group title="Video 1">
+                        <nav:item data-view="/boardroom/1-1" title="Part 1" />
+                        <nav:item data-view="/boardroom/1-2" title="Part 2" />
+                        <nav:item data-view="/boardroom/1-3" title="Part 3" />
+                    </nav:group>
+                    <nav:group title="Video 2">
+                        <nav:item data-view="/boardroom/2-1" title="Part 1" />
+                        <nav:item data-view="/boardroom/2-2" title="Part 2" />
+                    </nav:group>
+                    <nav:group title="Video 3">
+                        <nav:item data-view="/boardroom/3-1" title="Part 1" />
+                        <nav:item data-view="/boardroom/3-2" title="Part 2" />
+                    </nav:group>
+                    <nav:group title="Video 4">
+                        <nav:item data-view="/boardroom/4-1" title="Part 1" />
+                        <nav:item data-view="/boardroom/4-2" title="Part 2" />
+                        <nav:item data-view="/boardroom/4-3" title="Part 3" />
+                    </nav:group>
+                    <nav:group title="Video 5">
+                        <nav:item data-view="/boardroom/5-1" title="Part 1" />
+                        <nav:item data-view="/boardroom/5-2" title="Part 2" />
+                        <nav:item data-view="/boardroom/5-3" title="Part 3" />
+                        <nav:item data-view="/boardroom/5-4" title="Part 4" />
+                    </nav:group>
+                    <nav:group title="Video 6">
+                        <nav:item data-view="/boardroom/6-1" title="Part 1" />
+                        <nav:item data-view="/boardroom/6-2" title="Part 2" />
+                        <nav:item data-view="/boardroom/6-3" title="Part 3" />
+                    </nav:group>
+                </nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-rocket" title="VSL Fast Track">
+                    <nav:group title="Video 1">
+                        <nav:item data-view="/fast-track/1-1" title="Part 1" />
+                        <nav:item data-view="/fast-track/1-2" title="Part 2" />
+                        <nav:item data-view="/fast-track/1-3" title="Part 3" />
+                        <nav:item data-view="/fast-track/1-4" title="Part 4" />
+                    </nav:group>
+                    <nav:group title="Video 2">
+                        <nav:item data-view="/fast-track/2-1" title="Part 1" />
+                        <nav:item data-view="/fast-track/2-2" title="Part 2" />
+                        <nav:item data-view="/fast-track/2-3" title="Part 3" />
+                    </nav:group>
+                </nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-automobile" title="Unlimited Traffic (Traffic Pros)">
+                    <nav:item data-view="/traffic/issue-12" title="Issue 12" />
+                    <nav:item data-view="/traffic/issue-11" title="Issue 11" />
+                    <nav:item data-view="/traffic/issue-10" title="Issue 10" />
+                    <nav:item data-view="/traffic/issue-9" title="Issue 9" />
+                    <nav:item data-view="/traffic/issue-8" title="Issue 8" />
+                    <nav:item data-view="/traffic/issue-7" title="Issue 7" />
+                    <nav:item data-view="/traffic/issue-6" title="Issue 6" />
+                    <nav:item data-view="/traffic/issue-5" title="Issue 5" />
+                    <nav:item data-view="/traffic/issue-4" title="Issue 4" />
+                    <nav:item data-view="/traffic/issue-3" title="Issue 3" />
+                    <nav:item data-view="/traffic/issue-2" title="Issue 2" />
+                    <nav:item data-view="/traffic/issue-1" title="Issue 1" />
+                </nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-envelope" title="Email Formula">
+                    <nav:item data-view="/email/1-1" title="Part 1" />
+                    <nav:item data-view="/email/1-2" title="Part 2" />
+                    <nav:item data-view="/email/1-3" title="Part 3" />
+                    <nav:item data-view="/email/1-4" title="Part 4" />
+                    <nav:item data-view="/email/1-5" title="Part 5" />
+                </nav:group>
+
+                <nav:group data-icon="fa fa-large fa-fw fa-gift" title="Bonus Videos">
+                		<nav:item data-view="/q-a-recordings/hook-headline" title="Hook and Headline Workshop" />
+                    <nav:item data-view="/q-a-recordings/3-tips-1" title="3 Tips Live Q&A, Part 1" />
+                    <nav:item data-view="/q-a-recordings/3-tips-2" title="3 Tips Live Q&A, Part 2" />
+                    <nav:item data-view="/q-a-recordings/live-case-studies" title="Live Case Studies" />
+                    <nav:item data-view="/q-a-recordings/snap-suggestion-1" title="The Snap Suggestion, Part 1" />
+                    <nav:item data-view="/q-a-recordings/snap-suggestion-2" title="The Snap Suggestion, Part 2" />
+                    <nav:item data-view="/q-a-recordings/snap-suggestion-extended" title="Extended Q&A: Snap Suggestion" />
+                    <nav:item data-view="/q-a-recordings/big-problem-1" title="The Big Problem, Part 1" />
+                    <nav:item data-view="/q-a-recordings/big-problem-2" title="The Big Problem, Part 2" />
+                    <nav:item data-view="/q-a-recordings/big-solution" title="The Bigger Solution" />
+                    <nav:item data-view="/q-a-recordings/big-solution-extended" title="Extended Q&A: Big Problem/Bigger Solution" />
+                    <nav:item data-view="/q-a-recordings/grand-offer-1" title="The Grand Offer, Part 1" />
+                    <nav:item data-view="/q-a-recordings/grand-offer-2" title="The Grand Offer, Part 2" />
+                    <nav:item data-view="/q-a-recordings/grand-offer-extended" title="Extended Q&A: The Grand Offer" />
+                    <nav:item data-view="/q-a-recordings/robotic-close" title="Robotic Closes And Webinars" />
+                </nav:group>
+
+                <nav:item data-icon="fa fa-large fa-fw fa-list-ul" data-view="/spf" title="$5M Sales Letter Formula" />
+			</navigation>
+			<span class="minifyme" data-action="minifyMenu"> <i class="fa fa-arrow-circle-left hit"></i> </span>

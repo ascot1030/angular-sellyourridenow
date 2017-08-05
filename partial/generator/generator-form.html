@@ -1,0 +1,13 @@
+<form id="generator-form" method="post" data-ng-submit="saveSlide()" name="generatorForm">
+    <p style="color: #900;"><strong>Do Not Copy/Paste Into The Text Box Below</strong><br />
+    	
+   If you copy and paste into this box, then you may be unable to retrieve your slides at a later time. </style></p>
+    <div class="note-entry">
+        <div>Slide/Paragraph Text</div>
+        <textarea id="generator-area" data-ng-model="currentSlide.content" required="required" placeholder="Enter Your Slide and/or Paragraph Text Here" style="text-align: center;" data-character-count=""></textarea>
+        <div><span id="character-count">0</span>/300 characters</div>
+    </div>
+    <div style="text-align: center; padding: 5px 5px 0;">
+        <button class="btn btn-primary" data-ng-disabled="generatorForm.$invalid">Save and New</button>
+    </div>
+</form> 

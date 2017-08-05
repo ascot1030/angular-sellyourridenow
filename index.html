@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us" data-ng-app="generatorApp" data-ng-controller="MainController" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+    <title> Scriptr </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/smartadmin-skins.min.css">
+
+    <!-- SmartAdmin RTL Support is under construction-->
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/smartadmin-rtl.min.css">
+
+    <!-- We recommend you use "your_style.css" to override SmartAdmin
+         specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/your_style.css"> -->
+
+    <!-- Angular Related CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="content/smartadmin/ng.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="content/generator.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="content/toastr.min.css">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+    <!-- Specifying a Webpage Icon for Web Clip
+         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link rel="apple-touch-icon" href="content/img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="content/img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="content/img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="content/img/splash/touch-icon-ipad-retina.png">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="content/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="content/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="content/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+    
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-27595627-2', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body class="fixed-header fixed-page-footer smart-style-5">
+    
+
+    
+    <!-- POSSIBLE CLASSES: minified, fixed-ribbon, fixed-header, fixed-width, top-menu
+             You can also add different skin classes such as "smart-skin-0", "smart-skin-1" etc...-->
+    <!-- HEADER -->
+    <header id="header" data-ng-include="'partial/includes/header.html'"></header>
+    <!-- END HEADER -->
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel"><span data-ng-include="'partial/includes/left-panel.html'"></span></aside>
+    <!-- END NAVIGATION -->
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon" data-ng-include="'partial/includes/ribbon.html'" data-ribbon=""></div>
+        <!-- END RIBBON -->
+        <!-- CONTENT -->
+        <div id="content" class="view-animate">
+
+            <!-- widget grid -->
+            <section id="widget-grid" class="">
+
+                <!-- row -->
+                <div class="row">
+
+                    <!-- NEW WIDGET START -->
+                    <article class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+
+                        <!-- Widget ID (each widget will need unique ID)-->
+                        <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                            <!-- widget options:
+            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+            data-widget-colorbutton="false"
+            data-widget-editbutton="false"
+            data-widget-togglebutton="false"
+            data-widget-deletebutton="false"
+            data-widget-fullscreenbutton="false"
+            data-widget-custombutton="false"
+            data-widget-collapsed="true"
+            data-widget-sortable="false"
+
+        -->
+                            <header>
+                                <h2><strong>{{title}}</strong></h2>
+
+                            </header>
+
+                            <!-- widget div-->
+                            <div>
+
+                                <!-- widget edit box -->
+                                <div class="jarviswidget-editbox">
+                                    <!-- This area used as dropdown edit box -->
+
+                                </div>
+                                <!-- end widget edit box -->
+                                <!-- widget content -->
+                                <div class="widget-body">
+
+                                    
+
+<div data-ng-view="date-ng-view"></div>
+
+                                </div>
+                                <!-- end widget content -->
+
+                            </div>
+                            <!-- end widget div -->
+
+                        </div>
+                        <!-- end widget -->
+                    </article>
+                    <!-- WIDGET END -->
+                    <!-- NEW WIDGET START -->
+                    <article class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+
+                        <!-- Widget ID (each widget will need unique ID)-->
+                        <div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
+                            <!-- widget options:
+                                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                                data-widget-colorbutton="false"
+                                data-widget-editbutton="false"
+                                data-widget-togglebutton="false"
+                                data-widget-deletebutton="false"
+                                data-widget-fullscreenbutton="false"
+                                data-widget-custombutton="false"
+                                data-widget-collapsed="true"
+                                data-widget-sortable="false"
+
+                            -->
+                            <header>
+                                
+
+
+                                <ul class="nav nav-tabs pull-right in" id="myTab">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#slides">
+                                            <i class="fa fa-file-powerpoint-o"></i>
+                                            <span>Slides/Paragraphs</span>
+                                            <span class="badge bg-color-blue">
+                                                {{slides.length}}
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a data-toggle="tab" href="#notes">
+                                            <i class="fa fa-file-text-o"></i> <span>Notes</span>
+                                            <span class="badge bg-color-blue">
+                                                {{notes.length}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </header>
+
+                            <!-- widget div-->
+                            <div>
+
+                                <!-- widget edit box -->
+                                <div class="jarviswidget-editbox">
+                                    <!-- This area used as dropdown edit box -->
+
+                                </div>
+                                <!-- end widget edit box -->
+                                <!-- widget content -->
+                                <div class="widget-body no-padding">
+
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade active in" id="slides">
+                                            <div class="widget-body-toolbar bg-color-white">
+
+                                                <form class="form-inline" role="form">
+
+                                                    <div class="btn-group pull-right">
+                                                        <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i class="fa fa-cog"></i> More <span class="caret"> </span> </a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                            
+                                                            <li data-ng-show="hasGenerator">
+                                                                <a href="javascript: void(0);" data-toggle-slides=""><i class="fa fa-arrow-down"></i> Show/Hide All Copy</a>
+                                                            </li>
+                                                            <li data-ng-show="hasGenerator || hasScriptGenerator">
+                                                                <a href="/api/v1/print/slides?projectId={{currentProject.id}}" target="_blank"><i class="fa fa-file-text-o"></i> Print Slides/Sales Letter</a>
+                                                            </li>
+                                                            <li data-ng-show="hasGenerator">
+                                                                <a href="/api/v1/powerpoint?projectId={{currentProject.id}}" target="_blank"><i class="fa fa-file-powerpoint-o"></i> Export to PowerPoint/Keynote</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+                                            <div class="">
+                                                <span data-ng-include="'partial/includes/slide-panel.html'"></span>
+                                            </div>
+
+                                        </div>
+                                        <!-- end s1 tab pane -->
+
+                                        <div class="tab-pane fade" id="notes">
+                                            <div class="widget-body-toolbar bg-color-white">
+
+                                                <form class="form-inline" role="form">
+
+                                                    <div class="btn-group pull-right">
+                                                        <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i class="fa fa-cog"></i> More <span class="caret"> </span> </a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                            <li data-ng-show="hasGenerator">
+                                                                <a href="javascript: void(0);" data-toggle-notes=""><i class="fa fa-arrow-down"></i> Show/Hide All Notes</a>
+                                                            </li>
+                                                            <li data-ng-show="hasGenerator || hasScriptGenerator">
+                                                                <a href="/print?id={{currentProject.id}}" target="_blank"><i class="fa fa-file-text-o"></i> Print Notes</a>
+                                                            </li>
+                                                            <li data-ng-show="hasGenerator">
+                                                                <a href="javascript: void(0);" data-toggle="modal" data-target="#noteModal" data-ng-click="selectNote(null)"><i class="fa fa-plus"></i> New Note</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+                                            <div class="">
+                                                <span data-ng-include="'partial/includes/note-panel.html'"></span>
+                                            </div>
+
+                                        </div>
+                                        <!-- end s2 tab pane -->
+                                    </div>
+
+                                </div>
+                                <!-- end widget content -->
+
+                            </div>
+                            <!-- end widget div -->
+
+                        </div>
+                        <!-- end widget -->
+
+                    </article>
+                    <!-- WIDGET END -->
+
+
+                </div>
+
+                <!-- end row -->
+
+            </section>
+            <!-- end widget grid -->
+
+
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END MAIN PANEL -->
+    <!-- PAGE FOOTER -->
+    <div class="page-footer"><span data-ng-include="'partial/includes/footer.html'"></span></div>
+    <!-- END FOOTER -->
+    <!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+    Note: These tiles are completely responsive,
+    you can add as many as you like
+    -->
+    <div id="shortcut"><span data-ng-include="'partial/includes/shortcut.html'"></span></div>
+    <!-- END SHORTCUT AREA -->
+
+    <!-- Dynamic Modal -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Notifications</h4>
+                </div>
+                <div class="modal-body">
+                    <div data-ng-show="notifications.length == 0">
+                        There are no notifications to show.
+                    </div>
+                    <ol>
+                        <li data-ng-repeat="notification in notifications" style="margin-top: 20px;">
+                            <div style="color: #369;"><strong>Keith Cronin</strong> sent you a note on {{notification.date|jsonDateShort}}:</div>
+                            <div data-ng-bind-html="notification.note"></div>
+                            <div>
+                                <button class="btn" data-ng-click="deleteNotification(notification)">Got It</button>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal --> 
+
+
+    <!--================================================== -->
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="smartadmin/js/plugin/pace/pace.min.js"></script>-->
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    
+
+    <script src="scripts/ext/jquery-1.9.1/jquery-1.9.1.js"></script>
+    <script src="scripts/ext/smartadmin/libs/jquery-ui-1.10.3.min.js"></script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script src="scripts/ext/smartadmin/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="scripts/ext/smartadmin/bootstrap/bootstrap.min.js"></script>
+
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="scripts/ext/smartadmin/notification/SmartNotification.min.js"></script>
+
+    <!-- JARVIS WIDGETS -->
+    <script src="scripts/ext/smartadmin/smartwidgets/jarvis.widget.min.js"></script>
+
+    <!-- JQUERY VALIDATE -->
+    <script src="scripts/ext/smartadmin/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="scripts/ext/smartadmin/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="scripts/ext/smartadmin/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="scripts/ext/smartadmin/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+    <!-- browser msie issue fix -->
+    <script src="scripts/ext/smartadmin/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+    <!-- FastClick: For mobile devices: you can disable this in app.js -->
+    <script src="scripts/ext/smartadmin/plugin/fastclick/fastclick.min.js"></script>
+
+
+    <script src="scripts/ext/toastr.min.js"></script>
+
+    <!--[if IE 8]>
+        <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+    <![endif]-->
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.min.js"></script>
+    <!-- <script src="scripts/ext/angular-1.2.19/angular.min.js"></script>
+    <script src="scripts/ext/angular-1.2.19/angular-route.min.js"></script> -->
+    <script src="scripts/ext/angular-1.2.19/angular-animate.min.js"></script>
+    <script src="scripts/ext/angular-1.2.19/angular-resource.min.js"></script>
+    <script src="scripts/ext/angular-1.2.19/angular-sanitize.min.js"></script>
+    <script src="scripts/ext/angular-1.2.19/ui-bootstrap-custom-tpls-0.11.0.js"></script>
+
+    <!-- MAIN APP JS FILE -->
+    <script src="scripts/ext/smartadmin/app.js"></script>
+
+    <!-- MAIN ANGULAR JS FILE -->
+    
+    
+    <script src="scripts/generator/GeneratorApp.js"></script>
+    <script src="scripts/ext/smartadmin/ng/ng.directives.min.js"></script>
+</body>
+</html>

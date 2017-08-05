@@ -1,0 +1,22 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div data-ng-bind-html-unsafe="$parent.selectedSection.tutorialContent" ></div>
+    
+    <form method="post" data-ng-submit="saveNote()">
+        <div class="note-entry">
+            <div>Notes</div>
+            <textarea id="notepad" data-ng-model="selectedNote.userNote" placeholder="Enter Your Note Here"></textarea>
+        </div>
+        <div style="text-align: center; padding: 5px;">
+            <button class="btn btn-primary">Save and New</button>
+        </div>
+    </form>
+
+    <div style="margin: 10px;">
+        <a class="btn btn-warning pull-right" data-prevent-default="" data-ng-click="nextSection()">Next &gt;</a>
+        <div class="clearfix"></div>
+    </div>
+</div>

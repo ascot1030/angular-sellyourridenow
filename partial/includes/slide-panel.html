@@ -1,0 +1,2083 @@
+
+
+        <div id="collapseOne" class="accordion-body collapse accordian in" data-ng-show="hasGenerator || hasScriptGenerator">
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#pattern-interrupt" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{piSlides.length}}</span>&nbsp;&nbsp;&nbsp;Pattern Interrupt | Attention
+                    </a>
+                </h4>
+            </div>
+            <ul id="pattern-interrupt" class="accordion-body collapse" data-ng-model="piSlides">
+                <li data-ng-show="piSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in piSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == piSlides.length - 1 || piSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#watch-now" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{wnSlides.length}}</span>&nbsp;&nbsp;&nbsp;Watch This Now
+                    </a>
+                </h4>
+            </div>
+            <ul id="watch-now" class="accordion-body collapse" data-ng-model="wnSlides">
+                <li data-ng-show="wnSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in wnSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == wnSlides.length - 1 || wnSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#benefit-formula" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{bfSlides.length}}</span>&nbsp;&nbsp;&nbsp;Benefit Formula
+                    </a>
+                </h4>
+            </div>
+            <ul id="benefit-formula" class="accordion-body collapse" data-ng-model="bfSlides">
+                <li data-ng-show="bfSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in bfSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == bfSlides.length - 1 || bfSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#video-scarcity" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{vsSlides.length}}</span>&nbsp;&nbsp;&nbsp;Create Scarcity
+                    </a>
+                </h4>
+            </div>
+            <ul id="video-scarcity" class="accordion-body collapse" data-ng-model="vsSlides">
+                <li data-ng-show="vsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in vsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == vsSlides.length - 1 || vsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#something-different" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{sdSlides.length}}</span>&nbsp;&nbsp;&nbsp;Something Completely Different
+                    </a>
+                </h4>
+            </div>
+            <ul id="something-different" class="accordion-body collapse" data-ng-model="sdSlides">
+                <li data-ng-show="sdSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in sdSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == sdSlides.length - 1 || sdSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#deal" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{dealSlides.length}}</span>&nbsp;&nbsp;&nbsp;Let's Make A Deal
+                    </a>
+                </h4>
+            </div>
+            <ul id="deal" class="accordion-body collapse" data-ng-model="dealSlides">
+                <li data-ng-show="dealSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in dealSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == dealSlides.length - 1 || dealSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#modest-introduction" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{miSlides.length}}</span>&nbsp;&nbsp;&nbsp;A Modest Introduction
+                    </a>
+                </h4>
+            </div>
+            <ul id="modest-introduction" class="accordion-body collapse" data-ng-model="miSlides">
+                <li data-ng-show="miSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in miSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == miSlides.length - 1 || miSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#nightmare-intro" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{nmIntroSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Intro
+                    </a>
+                </h4>
+            </div>
+            <ul id="nightmare-intro" class="accordion-body collapse" data-ng-model="nmIntroSlides">
+                <li data-ng-show="nmIntroSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in nmIntroSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == nmIntroSlides.length - 1 || nmIntroSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#bad-part" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{nmBpSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Bad Part
+                    </a>
+                </h4>
+            </div>
+            <ul id="bad-part" class="accordion-body collapse" data-ng-model="nmBpSlides">
+                <li data-ng-show="nmBpSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in nmBpSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == nmBpSlides.length - 1 || nmBpSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#really-bad-part" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{nmRbpSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Really Bad Part
+                    </a>
+                </h4>
+            </div>
+            <ul id="really-bad-part" class="accordion-body collapse" data-ng-model="nmRbpSlides">
+                <li data-ng-show="nmRbpSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in nmRbpSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == nmRbpSlides.length - 1 || nmRbpSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#declaration-independence" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{nmDiSlides.length}}</span>&nbsp;&nbsp;&nbsp;Declaration Of Independence
+                    </a>
+                </h4>
+            </div>
+            <ul id="declaration-independence" class="accordion-body collapse" data-ng-model="nmDiSlides">
+                <li data-ng-show="nmDiSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in nmDiSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == nmDiSlides.length - 1 || nmDiSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#moral-journey" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{nmMjSlides.length}}</span>&nbsp;&nbsp;&nbsp;Moral Journey To Freedom
+                    </a>
+                </h4>
+            </div>
+            <ul id="moral-journey" class="accordion-body collapse" data-ng-model="nmMjSlides">
+                <li data-ng-show="nmMjSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in nmMjSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == nmMjSlides.length - 1 || nmMjSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#transition-big-problem" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{bpTansitionSlides.length}}</span>&nbsp;&nbsp;&nbsp;Transition To Big Problem
+                    </a>
+                </h4>
+            </div>
+            <ul id="transition-big-problem" class="accordion-body collapse" data-ng-model="bpTansitionSlides">
+                <li data-ng-show="bpTansitionSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in bpTansitionSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == bpTansitionSlides.length - 1 || bpTansitionSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#about-system" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{aboutSystemSlides.length}}</span>&nbsp;&nbsp;&nbsp;About The System
+                    </a>
+                </h4>
+            </div>
+            <ul id="about-system" class="accordion-body collapse" data-ng-model="aboutSystemSlides">
+                <li data-ng-show="aboutSystemSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in aboutSystemSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == aboutSystemSlides.length - 1 || aboutSystemSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#system-results" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{systemResultsSlides.length}}</span>&nbsp;&nbsp;&nbsp;Results Of The System
+                    </a>
+                </h4>
+            </div>
+            <ul id="system-results" class="accordion-body collapse" data-ng-model="systemResultsSlides">
+                <li data-ng-show="systemResultsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in systemResultsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == systemResultsSlides.length - 1 || systemResultsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#final-transition" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{finalTransitionSlides.length}}</span>&nbsp;&nbsp;&nbsp;Final Transition Phrase
+                    </a>
+                </h4>
+            </div>
+            <ul id="final-transition" class="accordion-body collapse" data-ng-model="finalTransitionSlides">
+                <li data-ng-show="finalTransitionSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in finalTransitionSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == finalTransitionSlides.length - 1 || finalTransitionSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#big-lie-transition" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{bigLieTransitionSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Big Lie Transition
+                    </a>
+                </h4>
+            </div>
+            <ul id="big-lie-transition" class="accordion-body collapse" data-ng-model="bigLieTransitionSlides">
+                <li data-ng-show="bigLieTransitionSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in bigLieTransitionSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == bigLieTransitionSlides.length - 1 || bigLieTransitionSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#big-lie-loop" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{bigLieLoopSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Big Lie (Lie Loop)
+                    </a>
+                </h4>
+            </div>
+            <ul id="big-lie-loop" class="accordion-body collapse" data-ng-model="bigLieLoopSlides">
+                <li data-ng-show="bigLieLoopSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in bigLieLoopSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == bigLieLoopSlides.length - 1 || bigLieLoopSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#no-fault" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{noFaultSlides.length}}</span>&nbsp;&nbsp;&nbsp;It's Not Your Fault
+                    </a>
+                </h4>
+            </div>
+            <ul id="no-fault" class="accordion-body collapse" data-ng-model="noFaultSlides">
+                <li data-ng-show="noFaultSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in noFaultSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == noFaultSlides.length - 1 || noFaultSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#blame-this" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{blameThisSlides.length}}</span>&nbsp;&nbsp;&nbsp;Blame This
+                    </a>
+                </h4>
+            </div>
+            <ul id="blame-this" class="accordion-body collapse" data-ng-model="blameThisSlides">
+                <li data-ng-show="blameThisSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in blameThisSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == blameThisSlides.length - 1 || blameThisSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#big-truth" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{bigTruthSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Big Truth
+                    </a>
+                </h4>
+            </div>
+            <ul id="big-truth" class="accordion-body collapse" data-ng-model="bigTruthSlides">
+                <li data-ng-show="bigTruthSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in bigTruthSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == bigTruthSlides.length - 1 || bigTruthSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#big-solution-open-loop" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{openBigSolutionLoopSlides.length}}</span>&nbsp;&nbsp;&nbsp;Bigger Solution Open Loop
+                    </a>
+                </h4>
+            </div>
+            <ul id="big-solution-open-loop" class="accordion-body collapse" data-ng-model="openBigSolutionLoopSlides">
+                <li data-ng-show="openBigSolutionLoopSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in openBigSolutionLoopSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == openBigSolutionLoopSlides.length - 1 || openBigSolutionLoopSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#open-tip-loop" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{openTipLoopSlides.length}}</span>&nbsp;&nbsp;&nbsp;Open Tip Loop
+                    </a>
+                </h4>
+            </div>
+            <ul id="open-tip-loop" class="accordion-body collapse" data-ng-model="openTipLoopSlides">
+                <li data-ng-show="openTipLoopSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in openTipLoopSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == openTipLoopSlides.length - 1 || openTipLoopSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#avoid-tip" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{avoidTipSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Avoid Tip
+                    </a>
+                </h4>
+            </div>
+            <ul id="avoid-tip" class="accordion-body collapse" data-ng-model="avoidTipSlides">
+                <li data-ng-show="avoidTipSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in avoidTipSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == avoidTipSlides.length - 1 || avoidTipSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#enjoy-tip" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{enjoyTipSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Enjoy Tip
+                    </a>
+                </h4>
+            </div>
+            <ul id="enjoy-tip" class="accordion-body collapse" data-ng-model="enjoyTipSlides">
+                <li data-ng-show="enjoyTipSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in enjoyTipSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == enjoyTipSlides.length - 1 || enjoyTipSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#how-to-tip" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{howToTipSlides.length}}</span>&nbsp;&nbsp;&nbsp;The How To Tip
+                    </a>
+                </h4>
+            </div>
+            <ul id="how-to-tip" class="accordion-body collapse" data-ng-model="howToTipSlides">
+                <li data-ng-show="howToTipSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in howToTipSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == howToTipSlides.length - 1 || howToTipSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#grand-offer-transition" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{grandOfferTransitionSlides.length}}</span>&nbsp;&nbsp;&nbsp;Transition To Grand Offer
+                    </a>
+                </h4>
+            </div>
+            <ul id="grand-offer-transition" class="accordion-body collapse" data-ng-model="grandOfferTransitionSlides">
+                <li data-ng-show="grandOfferTransitionSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in grandOfferTransitionSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == grandOfferTransitionSlides.length - 1 || grandOfferTransitionSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#formal-intro" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{formalIntroSlides.length}}</span>&nbsp;&nbsp;&nbsp;Overview + Formal Intro
+                    </a>
+                </h4>
+            </div>
+            <ul id="formal-intro" class="accordion-body collapse" data-ng-model="formalIntroSlides">
+                <li data-ng-show="formalIntroSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in formalIntroSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == formalIntroSlides.length - 1 || formalIntroSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#product-usp" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{uspSlides.length}}</span>&nbsp;&nbsp;&nbsp;Product + USP
+                    </a>
+                </h4>
+            </div>
+            <ul id="product-usp" class="accordion-body collapse" data-ng-model="uspSlides">
+                <li data-ng-show="uspSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in uspSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == uspSlides.length - 1 || uspSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#works-even-if" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{worksSlides.length}}</span>&nbsp;&nbsp;&nbsp;Works Even If
+                    </a>
+                </h4>
+            </div>
+            <ul id="works-even-if" class="accordion-body collapse" data-ng-model="worksSlides">
+                <li data-ng-show="worksSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in worksSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == worksSlides.length - 1 || worksSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#what-it-isnt" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{whatIsntSlides.length}}</span>&nbsp;&nbsp;&nbsp;What It Isn't
+                    </a>
+                </h4>
+            </div>
+            <ul id="what-it-isnt" class="accordion-body collapse" data-ng-model="whatIsntSlides">
+                <li data-ng-show="whatIsntSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in whatIsntSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == whatIsntSlides.length - 1 || whatIsntSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#hero-study" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{heroStudySlides.length}}</span>&nbsp;&nbsp;&nbsp;The Hero Study
+                    </a>
+                </h4>
+            </div>
+            <ul id="hero-study" class="accordion-body collapse" data-ng-model="heroStudySlides">
+                <li data-ng-show="heroStudySlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in heroStudySlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == heroStudySlides.length - 1 || heroStudySlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#hero-study-result" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{heroStudyResultSlides.length}}</span>&nbsp;&nbsp;&nbsp;Results Of Hero Study
+                    </a>
+                </h4>
+            </div>
+            <ul id="hero-study-result" class="accordion-body collapse" data-ng-model="heroStudyResultSlides">
+                <li data-ng-show="heroStudyResultSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in heroStudyResultSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == heroStudyResultSlides.length - 1 || heroStudyResultSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#out-of-club" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{outOfClubSlides.length}}</span>&nbsp;&nbsp;&nbsp;Out Of The Club
+                    </a>
+                </h4>
+            </div>
+            <ul id="out-of-club" class="accordion-body collapse" data-ng-model="outOfClubSlides">
+                <li data-ng-show="outOfClubSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in outOfClubSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == outOfClubSlides.length - 1 || outOfClubSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#easy-as-gets" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{easyAsSlides.length}}</span>&nbsp;&nbsp;&nbsp;Easy As It Gets
+                    </a>
+                </h4>
+            </div>
+            <ul id="easy-as-gets" class="accordion-body collapse" data-ng-model="easyAsSlides">
+                <li data-ng-show="easyAsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in easyAsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == easyAsSlides.length - 1 || easyAsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#qualify-remaining" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{QualifyRemainingSlides.length}}</span>&nbsp;&nbsp;&nbsp;Qualify Remaining
+                    </a>
+                </h4>
+            </div>
+            <ul id="qualify-remaining" class="accordion-body collapse" data-ng-model="QualifyRemainingSlides">
+                <li data-ng-show="QualifyRemainingSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in QualifyRemainingSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == QualifyRemainingSlides.length - 1 || QualifyRemainingSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#testimonials" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{testimonialsSlides.length}}</span>&nbsp;&nbsp;&nbsp;Testimonials
+                    </a>
+                </h4>
+            </div>
+            <ul id="testimonials" class="accordion-body collapse" data-ng-model="testimonialsSlides">
+                <li data-ng-show="testimonialsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in testimonialsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == testimonialsSlides.length - 1 || testimonialsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#whats-in-it" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{whatsInItSlides.length}}</span>&nbsp;&nbsp;&nbsp;What's In The Product
+                    </a>
+                </h4>
+            </div>
+            <ul id="whats-in-it" class="accordion-body collapse" data-ng-model="whatsInItSlides">
+                <li data-ng-show="whatsInItSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in whatsInItSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == whatsInItSlides.length - 1 || whatsInItSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#emphasize-x" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{emphasizeSlides.length}}</span>&nbsp;&nbsp;&nbsp;Emphasize X
+                    </a>
+                </h4>
+            </div>
+            <ul id="emphasize-x" class="accordion-body collapse" data-ng-model="emphasizeSlides">
+                <li data-ng-show="emphasizeSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in emphasizeSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == emphasizeSlides.length - 1 || emphasizeSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#first-price-tease" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{firstPriceTeaseSlides.length}}</span>&nbsp;&nbsp;&nbsp;First Price Tease
+                    </a>
+                </h4>
+            </div>
+            <ul id="first-price-tease" class="accordion-body collapse" data-ng-model="firstPriceTeaseSlides">
+                <li data-ng-show="firstPriceTeaseSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in firstPriceTeaseSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == firstPriceTeaseSlides.length - 1 || firstPriceTeaseSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#more-benefits" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{moreBenefitsSlides.length}}</span>&nbsp;&nbsp;&nbsp;More Benefits
+                    </a>
+                </h4>
+            </div>
+            <ul id="more-benefits" class="accordion-body collapse" data-ng-model="moreBenefitsSlides">
+                <li data-ng-show="moreBenefitsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in moreBenefitsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == moreBenefitsSlides.length - 1 || moreBenefitsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#faux-price" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{fauxPriceSlides.length}}</span>&nbsp;&nbsp;&nbsp;Emphasize The Faux Price
+                    </a>
+                </h4>
+            </div>
+            <ul id="faux-price" class="accordion-body collapse" data-ng-model="fauxPriceSlides">
+                <li data-ng-show="fauxPriceSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in fauxPriceSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == fauxPriceSlides.length - 1 || fauxPriceSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#buy-bonuses" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{bonusSlides.length}}</span>&nbsp;&nbsp;&nbsp;Bonuses
+                    </a>
+                </h4>
+            </div>
+            <ul id="buy-bonuses" class="accordion-body collapse" data-ng-model="bonusSlides">
+                <li data-ng-show="bonusSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in bonusSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == bonusSlides.length - 1 || bonusSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#restate-faux-price" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{restateFauxPriceSlides.length}}</span>&nbsp;&nbsp;&nbsp;Restate Faux Price
+                    </a>
+                </h4>
+            </div>
+            <ul id="restate-faux-price" class="accordion-body collapse" data-ng-model="restateFauxPriceSlides">
+                <li data-ng-show="restateFauxPriceSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in restateFauxPriceSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == restateFauxPriceSlides.length - 1 || restateFauxPriceSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#cost-of-loss" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{costOfLossSlides.length}}</span>&nbsp;&nbsp;&nbsp;Cost Of Loss
+                    </a>
+                </h4>
+            </div>
+            <ul id="cost-of-loss" class="accordion-body collapse" data-ng-model="costOfLossSlides">
+                <li data-ng-show="costOfLossSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in costOfLossSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == costOfLossSlides.length - 1 || costOfLossSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#discount-reason" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{discountReasonSlides.length}}</span>&nbsp;&nbsp;&nbsp;Reason For Discount
+                    </a>
+                </h4>
+            </div>
+            <ul id="discount-reason" class="accordion-body collapse" data-ng-model="discountReasonSlides">
+                <li data-ng-show="discountReasonSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in discountReasonSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == discountReasonSlides.length - 1 || discountReasonSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#price-dropdown" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{priceDropdownSlides.length}}</span>&nbsp;&nbsp;&nbsp;Price Dropdown
+                    </a>
+                </h4>
+            </div>
+            <ul id="price-dropdown" class="accordion-body collapse" data-ng-model="priceDropdownSlides">
+                <li data-ng-show="priceDropdownSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in priceDropdownSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == priceDropdownSlides.length - 1 || priceDropdownSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#price-reveal" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{priceRevealSlides.length}}</span>&nbsp;&nbsp;&nbsp;Price Reveal
+                    </a>
+                </h4>
+            </div>
+            <ul id="price-reveal" class="accordion-body collapse" data-ng-model="priceRevealSlides">
+                <li data-ng-show="priceRevealSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in priceRevealSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == priceRevealSlides.length - 1 || priceRevealSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#triple-guarantee" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{tripleGuaranteeSlides.length}}</span>&nbsp;&nbsp;&nbsp;Triple Guarantee
+                    </a>
+                </h4>
+            </div>
+            <ul id="triple-guarantee" class="accordion-body collapse" data-ng-model="tripleGuaranteeSlides">
+                <li data-ng-show="tripleGuaranteeSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in tripleGuaranteeSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == tripleGuaranteeSlides.length - 1 || tripleGuaranteeSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#cta-overview" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{ctaOverviewSlides.length}}</span>&nbsp;&nbsp;&nbsp;Overview + CTA
+                    </a>
+                </h4>
+            </div>
+            <ul id="cta-overview" class="accordion-body collapse" data-ng-model="ctaOverviewSlides">
+                <li data-ng-show="ctaOverviewSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in ctaOverviewSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == ctaOverviewSlides.length - 1 || ctaOverviewSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#cta-testimonials" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{ctaTestimonialsSlides.length}}</span>&nbsp;&nbsp;&nbsp;Testimonials
+                    </a>
+                </h4>
+            </div>
+            <ul id="cta-testimonials" class="accordion-body collapse" data-ng-model="ctaTestimonialsSlides">
+                <li data-ng-show="ctaTestimonialsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in ctaTestimonialsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == ctaTestimonialsSlides.length - 1 || ctaTestimonialsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#super-bonus" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{superBonusSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Super Bonus
+                    </a>
+                </h4>
+            </div>
+            <ul id="super-bonus" class="accordion-body collapse" data-ng-model="superBonusSlides">
+                <li data-ng-show="superBonusSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in superBonusSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == superBonusSlides.length - 1 || superBonusSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#inclusion" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{inclusionSlides.length}}</span>&nbsp;&nbsp;&nbsp;Inclusion
+                    </a>
+                </h4>
+            </div>
+            <ul id="inclusion" class="accordion-body collapse" data-ng-model="inclusionSlides">
+                <li data-ng-show="inclusionSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in inclusionSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == inclusionSlides.length - 1 || inclusionSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#triple-cta" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{ctaSlides.length}}</span>&nbsp;&nbsp;&nbsp;CTA
+                    </a>
+                </h4>
+            </div>
+            <ul id="triple-cta" class="accordion-body collapse" data-ng-model="ctaSlides">
+                <li data-ng-show="ctaSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in ctaSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == ctaSlides.length - 1 || ctaSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#checkout-process" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{checkoutSlides.length}}</span>&nbsp;&nbsp;&nbsp;Checkout Process
+                    </a>
+                </h4>
+            </div>
+            <ul id="checkout-process" class="accordion-body collapse" data-ng-model="checkoutSlides">
+                <li data-ng-show="checkoutSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in checkoutSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == checkoutSlides.length - 1 || checkoutSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#reminder" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{reminderSlides.length}}</span>&nbsp;&nbsp;&nbsp;Reminder
+                    </a>
+                </h4>
+            </div>
+            <ul id="reminder" class="accordion-body collapse" data-ng-model="reminderSlides">
+                <li data-ng-show="reminderSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in reminderSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == reminderSlides.length - 1 || reminderSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#responsibility" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{responsibilitySlides.length}}</span>&nbsp;&nbsp;&nbsp;Responsibility
+                    </a>
+                </h4>
+            </div>
+            <ul id="responsibility" class="accordion-body collapse" data-ng-model="responsibilitySlides">
+                <li data-ng-show="responsibilitySlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in responsibilitySlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == responsibilitySlides.length - 1 || responsibilitySlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#reinforce" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{reinforceSlides.length}}</span>&nbsp;&nbsp;&nbsp;Reinforce
+                    </a>
+                </h4>
+            </div>
+            <ul id="reinforce" class="accordion-body collapse" data-ng-model="reinforceSlides">
+                <li data-ng-show="reinforceSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in reinforceSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == reinforceSlides.length - 1 || reinforceSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#future-actions" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{futureActionsSlides.length}}</span>&nbsp;&nbsp;&nbsp;Future Paced Actions
+                    </a>
+                </h4>
+            </div>
+            <ul id="future-actions" class="accordion-body collapse" data-ng-model="futureActionsSlides">
+                <li data-ng-show="futureActionsSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in futureActionsSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == futureActionsSlides.length - 1 || futureActionsSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#remember-overview" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{rememberOverviewSlides.length}}</span>&nbsp;&nbsp;&nbsp;Remember Overview
+                    </a>
+                </h4>
+            </div>
+            <ul id="remember-overview" class="accordion-body collapse" data-ng-model="rememberOverviewSlides">
+                <li data-ng-show="rememberOverviewSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in rememberOverviewSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == rememberOverviewSlides.length - 1 || rememberOverviewSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#act-now" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{actNowSlides.length}}</span>&nbsp;&nbsp;&nbsp;Reasons To Act Now
+                    </a>
+                </h4>
+            </div>
+            <ul id="act-now" class="accordion-body collapse" data-ng-model="actNowSlides">
+                <li data-ng-show="actNowSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in actNowSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == actNowSlides.length - 1 || actNowSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#smart-thing" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{smartThingSlides.length}}</span>&nbsp;&nbsp;&nbsp;The Smart Thing
+                    </a>
+                </h4>
+            </div>
+            <ul id="smart-thing" class="accordion-body collapse" data-ng-model="smartThingSlides">
+                <li data-ng-show="smartThingSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in smartThingSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == smartThingSlides.length - 1 || smartThingSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-list accordion-group">
+            <div class="accordion-heading">
+                <h4>
+                    <a href="#qa" class="collapsed" data-toggle="collapse" data-prevent-default="">
+                        <span class="pull-right">&#x25BC;</span>
+                        <span class="badge badge-inverse">{{qaSlides.length}}</span>&nbsp;&nbsp;&nbsp;Samurai Q&A
+                    </a>
+                </h4>
+            </div>
+            <ul id="qa" class="accordion-body collapse" data-ng-model="qaSlides">
+                <li data-ng-show="qaSlides.length == 0">No slides to show</li>
+                <li data-ng-repeat="slide in qaSlides | orderBy:'slideOrder'">
+                    <div class="move-slide-container">
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == qaSlides.length - 1 || qaSlides.length <= 1 || progress" data-ng-click="moveSlideDown(slide)"><img src="../../content/images/icon-down-clear.png" /></a></div>
+                        <div><a href="#" data-prevent-default="data-prevent-default" data-ng-hide="$index == 0 || progress" data-ng-click="moveSlideUp(slide)"><img src="../../content/images/icon-up-clear.png" /></a></div>
+                    </div>
+                    <div class="slide-content">
+                        <div data-ng-bind-html="slide.content | nl2br"></div>
+                    </div>
+                    <div>
+                        <ul class="nav">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../../content/images/icon-edit.png" /></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-prevent-default="" data-ng-click="navToSlide(slide)">Edit</a></li>
+                                    <li><a href="#" data-prevent-default="" data-ng-click="deleteSlide(slide)">Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>

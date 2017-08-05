@@ -1,0 +1,66 @@
+﻿<div data-ui-animate="">
+    <div class="well no-padding">
+        <form name="login" method="post" id="login-form" class="smart-form client-form">
+            <header>
+                <!--Sign In-->
+            </header>
+
+            <fieldset>
+
+                <p style="color: #900; font-weight: bold;" data-ng-show="$parent.autoLogout">Due to inactivity, you have been logged out of the Generator. Please login again below.</p>
+                <p style="text-align: center" data-ng-hide="$parent.autoLogout">Please login below.</p>
+
+                <p>The site is not compatible with any sort of password manager. You must manually enter your login details.</p>
+
+                <section>
+                    <label class="label">E-mail</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-user"></i>
+                        <input type="text" data-ng-model="email" required="required" autocomplete="off" placeholder="youremail@yourdomain.com">
+                        <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b>
+                    </label>
+                </section>
+
+                <section>
+                    <label class="label">Password</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-lock"></i>
+                        <input style="display:none" type="password" name="foilautofill" />
+                        <input type="password" data-ng-model="password" required="required" autocomplete="off" placeholder="Your Password">
+                        <b class=" tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+                    </label>
+                    <div class="note">
+                        <a href="http://app.ramirami.com/#/forgot-password">Forgot password?</a>
+                    </div>
+                </section>
+            </fieldset>
+            <footer>
+                <button class="btn btn-primary" data-ng-click="sendLogin()" data-prevent-default="data-prevent-default">Login</button>
+            </footer>
+        </form>
+
+    </div>
+
+    <!--<div style="width: 100%; text-align: center; margin-top: 10px;">
+        <div class="player play-button color-light" id="player" data-embed="false" data-video-player-login="{{videoUrl}}" data-ratio="0.757" >
+        </div>
+    </div>-->
+        
+        <!--<p style="color: #900; font-weight: bold;" data-ng-show="$parent.autoLogout">Due to inactivity, you have been logged out of the Generator. Please login again below.</p>
+        <p style="text-align: center" data-ng-hide="$parent.autoLogout">Please login below.</p>
+
+        <p>The site is not compatible with any sort of password manager. You must manually enter your login details.</p>
+        <form name="login" method="post">
+            <p>Email Address: <br />
+                <input type="text" data-ng-model="email" placeholder="youremail@yourdomain.com" required="required" autocomplete="off" />
+            </p>
+            <p>Password: <br />
+                <input style="display:none" type="password" name="foilautofill"/>
+                <input type="password" data-ng-model="password" placeholder="Your Password" required="required" autocomplete="off" />
+            </p>
+            <p><a href="/#/forgot-password">Forgot Password</a></p>
+            <p>
+                <button class="btn btn-primary" data-ng-click="sendLogin()" data-prevent-default="data-prevent-default">Login</button>
+            </p>
+        </form>-->
+</div>

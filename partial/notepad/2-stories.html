@@ -1,0 +1,22 @@
+<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div style="text-align: center; margin: 0 auto;">
+        <iframe src="http://player.vimeo.com/video/67426867" width="500" height="379" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen data-ng-hide="hasScriptGenerator && !hasVsl"></iframe>
+    </div>
+    <div data-ng-show="hasGenerator">
+        <h5><a href="javascript: void(0);" data-prevent-default="" data-target="#tutorial" data-toggle="collapse"><span class="pull-right">&#x25BC;</span> Overview</a></h5>
+        <div id="tutorial" class="collapse in">
+            <p>A major part of a winning VSL (or any sales letter) is the element of stories and clever storytelling. The 3X VSL Formula will walk you step by step through the process of creating a Nightmare Story and a Dream Story. The video above will introduce you to the strategies behind each.</p>
+            <h5>Assignment</h5>
+            <p>Described in the tutorial video above.</p>
+        </div>
+
+        <div data-ng-include="'/partial/notepad/note-form.html'"></div>
+    </div>
+    <div class="continue">
+        <a href="#/notepad/3-tips" class="btn btn-success" data-ng-click="saveNote()">Continue To Next Section &#x25B6;</a>
+    </div>
+</div>

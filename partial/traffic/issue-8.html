@@ -1,0 +1,26 @@
+<div class="spacing" data-ui-animate="" data-ng-init="month='Issue 8'; person='Scott Zetlan';">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div style="text-align: center; margin: 0 auto;" data-ng-hide="hasTrafficPros">
+        <p>You do not have Traffic Pros Monthly added to your account. Please watch the video below for a preview of this issue.</p>
+
+        <div style="text-align: center; margin: 10px auto;"><iframe src="http://player.vimeo.com/video/85893412" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+        <p style="font-size: 22px;"><a href="https://ramirami.com/upgrades/trafficpros.html?firstnamepar={{user.firstName}}&amp;lastnamepar={{user.lastName}}&amp;emailpar={{user.email}}" target="_blank">Click Here To Get Traffic Pros Now!</a><br />(You'll Get This Full Issue Plus Future Issues)</p>
+    </div>
+
+    <div style="text-align: center; margin: 0 auto;" data-ng-show="hasTrafficPros">
+        <iframe src="http://player.vimeo.com/video/93220524" width="500" height="278" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <ul style="list-style: none;" data-ng-show="hasTrafficPros">
+        <li>Transcript Coming Really soon</li>
+    </ul>
+
+    <div>
+        <p>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div id="question-result">
+        <table>
+            <tr>
+                <td class="vote-buttons">
+                    <div class="up-vote">
+                        <button class="btn" data-ng-click="upVote()" data-ng-disabled="!canVoteOnQuestion()">&#x25B2;</button>
+                    </div>
+                    <div class="vote-count">{{question.question.totalVotes}}</div>
+                    <div class="up-vote">
+                        <button class="btn" data-ng-click="downVote()" data-ng-disabled="!canVoteOnQuestion()">&#x25BC;</button>
+                    </div>
+                </td>
+                <td class="user-question">
+                    <div class="question-content">
+                        {{question.question.content}}
+                    </div>
+
+                    
+                    <div class="question-tags">
+                        <a class="question-tag" data-ng-repeat="tag in question.question.tags" href="#/questions/tags/{{tag}}">{{tag}}</a>
+                    </div>
+                    <div class="question-info">
+                        Asked {{question.question.createdDate|jsonDate}} by <span class="question-author"><a href="#/questions/users/{{question.user.id}}">{{question.user.firstName}}</a></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="total-answers"><h4>{{totalAnswers}} Answers</h4></div>
+
+    <div id="question-answers">
+        <table>
+            <tr data-ng-repeat="answer in answers">
+                <td class="vote-buttons">
+                    <div class="up-vote">
+                        <button class="btn" data-ng-click="answerUpVote(answer)" data-ng-disabled="!canVoteOnAnswer(answer)">&#x25B2;</button>
+                    </div>
+                    <div class="vote-count">{{answer.answer.totalVotes}}</div>
+                    <div class="up-vote">
+                        <button class="btn" data-ng-click="answerDownVote(answer)" data-ng-disabled="!canVoteOnAnswer(answer)">&#x25BC;</button>
+                    </div>
+                </td>
+                <td class="user-question">
+                    <div class="question-content">
+                        {{answer.answer.content}}
+                    </div>
+
+                    
+                    <div class="question-info">
+                        Answered {{answer.answer.createdDate|jsonDate}} by <span class="question-author"><a href="#/questions/users/{{answer.user.id}}">{{answer.user.firstName}}</a></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <form id="answer-form" name="answerForm" data-ng-show="question.question.id">
+        <div>
+            <label>Your Answer:<br />
+                <textarea data-ng-model="answer.content" placeholder="Put your answer to the question here." required="required"></textarea>
+            </label>
+        </div>
+        <div>
+            <button class="btn btn-primary" data-prevent-default="data-prevent-default" data-ng-click="saveAnswer()" data-ng-disabled="answerForm.$invalid">Answer</button>
+        </div>
+    </form>
+</div>

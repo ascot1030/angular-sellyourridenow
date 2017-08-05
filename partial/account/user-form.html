@@ -1,0 +1,52 @@
+﻿<div class="spacing">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <p data-ng-hide="isAccountOwner" data-ng-cloak="data-ng-cloak">You do not have permission to access this page. Please contact your account owner.</p>
+
+    <div data-ng-hide="!isAccountOwner">
+        <p data-ng-hide="canAddLicense">You have used all ({{accountInfo.licensesAllowed}}) licenses in your account.</p>
+
+        <p data-ng-show="canAddLicense">Please use the form below to add a new user license to your account</p>
+
+        <form method="post" name="licenseForm" data-ng-submit="saveLicense()" class="form-horizontal" style="margin: 10px; width: 250px;" data-ng-show="canAddLicense">
+            <div class="control-group error">
+                <div class="controls">
+                    <p>
+                        First Name:
+                        <br />
+                        <input type="text" name="firstName" data-ng-model="license.firstName" placeholder="First Name" required="required" />
+                        <span data-ng-show="licenseForm.firstName.$dirty && licenseForm.firstName.$error.required" class="help-inline">Required</span><br />
+                    </p>
+                    <p>
+                        Last Name:
+                        <br />
+                        <input type="text" name="lastName" data-ng-model="license.lastName" placeholder="Last Name" required="required" />
+                        <span data-ng-show="licenseForm.lastName.$dirty && licenseForm.lastName.$error.required" class="help-inline">Required</span><br />
+                    </p>
+                    <p>
+                        Email:
+                        <br />
+                        <input type="email" name="email" data-ng-model="license.email" placeholder="Email" required="required" />
+                        <span data-ng-show="licenseForm.email.$dirty && licenseForm.email.$error.required" class="help-inline">Required</span><br />
+                    </p>
+                    <p>
+                        Password:
+                        <br />
+                        <input type="password" name="password" data-ng-model="license.password" placeholder="Password" />
+                    </p>
+                    <p>
+                        Confirm Password:
+                        <br />
+                        <input type="password" name="confirmPassword" data-ng-model="license.confirmPassword" placeholder="Confirm Password" data-ui-validate=" '$value==license.password' " data-ui-validate-watch=" 'license.password' " />
+                        <span data-ng-show="licenseForm.confirmPassword.$dirty && licenseForm.confirmPassword.$error.validator" class="help-inline">Passwords Do Not Match</span><br />
+                    </p>
+                </div>
+            </div>
+            <button class="btn btn-primary" data-ng-disabled="licenseForm.$invalid">
+                <i class="icon-hdd icon-white"></i>&nbsp;Save User
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿<div class="spacing" data-ui-animate="" data-ng-init="month='November 2013 Issue'; person='Mike Litman, Buying Cheap Email Traffic';">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+
+    <div data-ng-show="notifications.length == 0">
+        There are no notifications to show.
+    </div>
+
+    <ol>
+        <li data-ng-repeat="notification in notifications" style="margin-top: 20px;">
+            <div style="color: #369;"><strong>Jon Benson</strong> sent you a note on {{notification.date|jsonDateShort}}:</div>
+            <div data-ng-bind-html="notification.note"></div>
+            <div>
+                <button class="btn" data-ng-click="deleteNotification(notification)">Got It</button>
+            </div>
+        </li>
+    </ol>
+</div>

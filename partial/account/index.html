@@ -1,0 +1,89 @@
+﻿<div class="spacing" data-ui-animate="">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+    
+    <!--<div class="account-info">
+        <div class="account-field">
+            Account Owner
+        </div>
+        <div class="account-value">
+            {{accountOwner.firstName}} {{accountOwner.lastName}}; {{accountOwner.email}} 
+        </div>
+        <div class="clearfix"></div>
+    </div>-->
+    
+    <div class="account-info">
+        <div class="account-field">
+            My Info
+        </div>
+        <div class="account-value">
+            {{user.firstName}} {{user.lastName}}; {{user.email}} 
+            (<a href="">Change</a>) 
+            (<a href="#/change-password">Change Password</a>)
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="account-info" data-ng-show="isAccountOwner">
+        <div class="account-field">
+            Current Memberships
+        </div>
+        <div class="account-value">
+            <p data-ng-show="hasVsl">3X VSL Course</p>
+            <p data-ng-show="hasGenerator">3X VSL Generator<!-- (Trial) (<a href="#">Upgrade And Save</a>) (<a href="#">Cancel</a>)--></p>
+            <p data-ng-show="hasBoardroom">3X VSL Boardroom Mastermind Series</p>
+            <p data-ng-show="hasFastTrack">3X VSL Fast Track</p>
+            <p data-ng-show="hasTrafficPros">3X Traffic Pros Monthly</p>
+            <p data-ng-show="hasElite">3X Elite: The Copy Posse</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="account-info" data-ng-show="isAccountOwner">
+        <div class="account-field">
+            Add-Ons For Your Account
+        </div>
+        <div class="account-value">
+            <!--<p data-ng-hide="hasVsl"><a href="#">3X VSL Course</a></p>
+            <p data-ng-hide="hasGenerator"><a href="#" target="_blank">3X VSL Generator</a></p>-->
+            <p data-ng-hide="hasBoardroom"><a href="https://ramirami.com/upgrades/boardroom.html?firstnamepar={{user.firstName}}&amp;lastnamepar={{user.lastName}}&amp;emailpar={{user.email}}" target="_blank">3X VSL Boardroom Mastermind Series</a></p>
+            <!--<p data-ng-hide="hasFastTrack"><a href="#" target="_blank">3X VSL Fast Track</a></p>-->
+            <p data-ng-hide="hasTrafficPros"><a href="https://ramirami.com/upgrades/trafficpros.html?firstnamepar={{user.firstName}}&amp;lastnamepar={{user.lastName}}&amp;emailpar={{user.email}}" target="_blank">3X Traffic Pros Monthly</a></p>
+            <!--<p data-ng-hide="hasElite"><a href="#" target="_blank">3X Elite: The Copy Posse</a></p>-->
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="account-info" data-ng-show="isAccountOwner">
+        <div>
+            Licenses ({{accountInfo.licensesUsed}} of {{accountInfo.licensesAllowed}} used)<!-- (Remember: the account owner counts as a license used)--><br />
+            <a href="https://ramirami.com/get3xsellerator/add-license.html" target="_blank">Add A License</a> (Refresh your browser after adding licenses to see them here for setup)
+        </div>
+        
+        <div class="account-licenses">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th><button data-ng-click="addUser()" data-prevent-default="data-prevent-default" class="btn btn-small btn-success" data-ng-disabled="!canAddLicenses" style="margin-bottom: 0;">Add</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="license in accountInfo.licenses">
+                        <td>{{license.firstName}}<span data-ng-hide="canDelete(license.email)"> (Account Owner)</span></td>
+                        <td>{{license.lastName}}</td>
+                        <td>{{license.email}}</td>
+                        <td style="width: 30px;">
+                            <a class="btn btn-mini btn-danger" data-ng-click="deleteLicense(license)" data-prevent-default="" href="#" data-ng-show="canDelete(license.email)">
+                                <i class="fa fa-times-circle"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

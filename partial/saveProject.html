@@ -1,0 +1,28 @@
+﻿<div data-ui-animate="">
+
+    <!--<div style="text-align: center; margin: 0 auto;" data-ng-show="projectRequired">
+        <h4>Before You Create Your First Sales Page<br />
+            You Must Watch This Short "How To<br />
+            Use The Sellerator" Video</h4>
+        <iframe src="//player.vimeo.com/video/104763547" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>-->
+    <p style="color: #900; font-weight: bold; text-align: center;" data-ng-show="projectRequired">To start using this system, you need a project. Please enter a title for your first Sales Page.</p>
+
+    <p style="text-align: center;">Use the form below to name a new Sales Page.</p>
+
+    <form method="post" name="projectForm" data-ng-submit="saveProject()" class="form-horizontal" style="margin: 10px auto; width: 250px;">
+        <div class="control-group error">
+            <div class="controls">
+                <input type="text" name="title" data-ng-model="projectTitle" placeholder="Project Title" required="required" />
+                <span data-ng-show="projectForm.title.$dirty && projectForm.title.$error.required" class="help-inline">Required</span><br />
+                
+                <!--<input type="url" name="url" data-ng-model="projectUrl" placeholder="URL Where VSL will Play" required="required" />
+                <span data-ng-show="projectForm.url.$dirty && projectForm.url.$error.required" class="help-inline">Required</span><br />
+                <span data-ng-show="projectForm.url.$dirty && projectForm.url.$error.url" class="help-inline">Invalid URL</span><br />-->
+            </div>
+        </div>
+        <button class="btn btn-primary" data-ng-disabled="projectForm.$invalid" style="margin-top: 10px;">
+            <i class="icon-hdd icon-white"></i>&nbsp;Create Project
+        </button>
+    </form>
+</div>
